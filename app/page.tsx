@@ -1,9 +1,3 @@
-
 export default function Home() {
-  return (
-    <div>
-      <main>The Monaco Protocol</main>
-      <footer></footer>
-    </div>
-  );
+  return <main>The Monaco Protocol</main>;
 }
