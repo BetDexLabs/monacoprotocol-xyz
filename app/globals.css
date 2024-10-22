@@ -12,6 +12,7 @@
   --gradient-light-blue-to-purple: linear-gradient(90deg, #109EF6 0%, #4337F9 100%);
   --gradient-white-to-gray: linear-gradient(135deg, #FFFFFF 0%, #71717A 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  --dark-indigo-transparent: rgba(11, 4, 30, 0.3);
 }
 
 body {

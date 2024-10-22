@@ -1,8 +1,10 @@
+"use client";
 import { LinkButton } from "@/app/common";
 import { RightArrow } from "@/icons";
 import Link from "next/link";
+import { FC } from "react";
 
-export const Hero = () => (
+export const Hero: FC = () => (
   <section className="section">
     <h1 className="page-heading text-center">Monaco Protocol</h1>
     <h3 className="text-subheading-expanded heading-neutral text-center max-w-[1200px]">

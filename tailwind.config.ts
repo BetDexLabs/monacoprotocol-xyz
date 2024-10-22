@@ -13,6 +13,7 @@ const config: Config = {
         secondary: "var(--blue-500)",
         tertiary: "var(--gray-400)",
         supportive: "var(--gray-200)",
+        "blurred-bg": "var(--dark-indigo-transparent)",
       },
       backgroundImage: {
         main: "var(--gradient-dark-purple)",

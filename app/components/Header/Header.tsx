@@ -2,8 +2,9 @@
 import { BurgerMenu } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
+import { FC } from "react";
 
-export const Header = () => {
+export const Header: FC = () => {
   return (
     <header className="flex justify-between items-center max-w-max-page mx-auto gap-24 horizontal-padding py-7 md:py-9 xxl:py-12">
       <div className="flex xxl:gap-24">

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-
   /* texts */
   .page-heading {
     @apply text-[32px] leading-[1] font-semibold tracking-tighter;
@@ -69,18 +68,23 @@
     .horizontal-padding {
       @apply px-9
     }
+    .vertical-section-padding {
+      @apply py-9
+    }
   }
 
   @screen xxl {
     .horizontal-padding {
       @apply px-28
-    }
+    } 
   }
 
   /* section */
-
   .section {
     @apply flex flex-col gap-8 horizontal-padding vertical-section-padding max-w-max-content box-content mx-auto
+  }
+  .blurred-wrapper {
+    @apply bg-blurred-bg backdrop-blur-[50px] w-full
   }
   @screen xxl {
     .section {
@@ -88,3 +92,4 @@
     }
   }
 }
+
