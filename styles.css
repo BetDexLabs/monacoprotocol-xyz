@@ -6,21 +6,20 @@
 
   /* texts */
   .page-heading {
-    @apply text-[32px] leading-[1] font-semibold tracking[-0.05em];
+    @apply text-[32px] leading-[1] font-semibold tracking-tighter;
   }
   .text-heading {
-    @apply text-[24px] leading-[1] font-semibold tracking[-0.05em];
+    @apply text-[24px] leading-[1] font-semibold tracking-tighter;
   }
   .text-subheading, .text-subheading-expanded {
     @apply text-[16px] leading-[20px] font-semibold;
   }
-  .text-caption {
-    @apply font-semibold;
+  .text-nav {
+    @apply text-[16px] font-semibold;
   }
   .text-common {
-    @apply text-[14px] leading-[20px];
+    @apply text-[14px] leading-[20px] font-normal;
   }
-
 
   @screen md {
     .page-heading {
@@ -33,10 +32,9 @@
       @apply text-[32px] leading-[40px] tracking-[-2px];
     }
     .text-common {
-      @apply text-[20px] leading-[24px] tracking-[-0.02em];
+      @apply text-[20px] leading-[24px] tracking-tight;
     }
   }
-
 
   @screen xxl {
     .page-heading {
@@ -51,17 +49,20 @@
     .text-subheading-expanded {
       @apply text-[48px] leading-[54px] tracking-[-2px];
     }
-    .text-caption {
+    .text-nav {
       @apply text-[30px] leading-[36px];
     }
     .text-common {
-      @apply text-[24px] leading-[34px] tracking-[-0.02em];
+      @apply text-[24px] leading-[34px];
     }
   }
 
   /* paddings */
   .horizontal-padding {
     @apply px-4
+  }
+  .vertical-section-padding {
+    @apply py-3
   }
 
   @screen md {
@@ -73,6 +74,17 @@
   @screen xxl {
     .horizontal-padding {
       @apply px-28
+    }
+  }
+
+  /* section */
+
+  .section {
+    @apply flex flex-col gap-8 horizontal-padding vertical-section-padding max-w-max-content box-content mx-auto
+  }
+  @screen xxl {
+    .section {
+      @apply gap-12
     }
   }
 }

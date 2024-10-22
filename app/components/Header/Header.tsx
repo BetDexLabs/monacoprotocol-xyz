@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="flex justify-between items-center max-w-max-page gap-24 horizontal-padding py-7 md:py-9 xxl:py-12">
+    <header className="flex justify-between items-center max-w-max-page mx-auto gap-24 horizontal-padding py-7 md:py-9 xxl:py-12">
       <div className="flex xxl:gap-24">
         <Image
           className="hidden xxl:block"
@@ -23,7 +23,7 @@ export const Header = () => {
             alt="The Monaco Protocol icon"
           />
         </div>
-        <ul className="hidden xxl:flex gap-12 items-center text-caption">
+        <ul className="hidden xxl:flex gap-12 items-center text-nav">
           <li>
             <Link href="">
               <span>Use Cases</span>
@@ -51,13 +51,13 @@ export const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="md:hidden text-caption pointer">
+      <div className="md:hidden text-nav pointer">
         <BurgerMenu size="small" />
       </div>
-      <div className="hidden md:block xxl:hidden text-caption pointer">
+      <div className="hidden md:block xxl:hidden text-nav pointer">
         <BurgerMenu size="default" />
       </div>
-      <div className="hidden xxl:block text-caption pointer">
+      <div className="hidden xxl:block text-nav pointer">
         <Link href="">Contact team</Link>
       </div>
     </header>

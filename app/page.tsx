@@ -1,3 +1,9 @@
+import { Hero } from "@/app/components";
+
 export default function Home() {
-  return <main>The Monaco Protocol</main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 }

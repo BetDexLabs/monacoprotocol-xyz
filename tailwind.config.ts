@@ -9,18 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        typography: {
-          primary: "var(--white)",
-          secondary: "var(--blue-500)",
-          tertiary: "var(--gray-400)",
-          "heading-dark": "var(--gradient-blue-to-purple)",
-          "heading-light": "var(--gradient-light-blue-to-purple)",
-          "heading-neutral": "var(--gradient-white-to-gray)",
-        },
-        background: {
-          main: "var(--gradient-dark-purple)",
-          accent: "var(--gradient-blue-to-purple)",
-        },
+        primary: "var(--white)",
+        secondary: "var(--blue-500)",
+        tertiary: "var(--gray-400)",
+        supportive: "var(--gray-200)",
+      },
+      backgroundImage: {
+        main: "var(--gradient-dark-purple)",
+        accent: "var(--gradient-blue-to-purple)",
       },
       maxWidth: {
         "max-page": "1920px",

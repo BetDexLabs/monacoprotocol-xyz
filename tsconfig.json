@@ -19,9 +19,9 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
+      "@/components": ["./app/components/*"],
       "@/icons": ["./icons"],
-      "@/hooks": ["./hooks"]
+      "@/common": ["./app/common/*"]
 
     }
   },
