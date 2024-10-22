@@ -4,19 +4,27 @@
 
 :root {
   --white: #ffffff;
-    --blue-500: #217BF7;
-    --gray-400: #B4B4B4;
-    --gradient-dark-purple: linear-gradient(270deg, #1C0068 0%, #090514 100%);
-    --gradient-blue-to-purple: linear-gradient(90deg, #109EF6 0%, #2573F7 42%, #4337F9 100%);
-    --gradient-light-blue-to-purple: linear-gradient(90deg, #109EF6 0%, #4337F9 100%);
-    --gradient-white-to-gray: linear-gradient(135deg, #FFFFFF 0%, #71717A 100%),
-      linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  --blue-500: #217BF7;
+  --gray-400: #B4B4B4;
+  --gradient-dark-purple: linear-gradient(270deg, #1C0068 0%, #090514 100%);
+  --gradient-blue-to-purple: linear-gradient(90deg, #109EF6 0%, #2573F7 42%, #4337F9 100%);
+  --gradient-light-blue-to-purple: linear-gradient(90deg, #109EF6 0%, #4337F9 100%);
+  --gradient-white-to-gray: linear-gradient(135deg, #FFFFFF 0%, #71717A 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 body {
   color: var(--white);
-    background: var(--gradient-dark-purple);
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background: var(--gradient-dark-purple);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@screen md {
+  body {
+    background-image: url("/monaco-bg.png"), var(--gradient-dark-purple);
+    background-position: top center;
+    background-size: 100%;
+  }
 }
 
 @layer utilities {
