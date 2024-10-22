@@ -19,19 +19,19 @@ const config: Config = {
         },
         background: {
           main: "var(--gradient-dark-purple)",
-          accent: "var(--gradient-blue-to-purple)"
+          accent: "var(--gradient-blue-to-purple)",
         },
       },
-      fontSize: {
-        h1: ['125px', { lineHeight: '125px', fontWeight: '600', letterSpacing: '-0.05em' }],
-        h2: ['48px', { lineHeight: '56px', fontWeight: '600', letterSpacing: '-0.05em' }],
-        h3: ['30px', { lineHeight: '36px', fontWeight: '600', letterSpacing: '0' }],
-        body: ['24px', { lineHeight: '34px', fontWeight: '400', letterSpacing: '-0.02em' }]
+      maxWidth: {
+        "max-page": "1920px",
+        "max-content": "1285px",
       },
       screens: {
-        sm: '320px',
-        md: '672px',
-        xl: '1920px'
+        sm: "320px",
+        md: "672px",
+        // lg: "1056px",
+        // xl: "1312px",
+        xxl: "1920px",
       },
     },
   },
