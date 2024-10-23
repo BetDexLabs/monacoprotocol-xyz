@@ -1,7 +1,9 @@
+export * from "./Footer";
+export * from "./Header";
+
 export * from "./Banner";
 export * from "./BuildOnMonaco";
 export * from "./Ecosystem";
-export * from "./Header";
 export * from "./Hero";
 export * from "./OtherProducts";
 export * from "./TradingIntegrations";
