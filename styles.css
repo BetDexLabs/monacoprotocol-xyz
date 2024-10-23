@@ -16,8 +16,11 @@
   .text-nav {
     @apply text-[16px] font-semibold;
   }
+  .text-caption {
+    @apply text-[16px] leading-[1.25] font-semibold
+  }
   .text-common {
-    @apply text-[16px] leading-[24px] font-normal tracking-tight;
+    @apply text-[16px] leading-[1] font-normal tracking-tight;
   }
   .text-small {
     @apply text-[14px] leading-[20px] font-normal tracking-tight;
@@ -33,8 +36,11 @@
     .text-subheading {  
       @apply text-[32px] tracking-[-2px];
     }
+    .text-caption {
+      @apply text-[30px];
+    }
     .text-common {
-      @apply text-[24px] leading-[34px] tracking-tight;
+      @apply text-[24px];
     }
     .text-small {
       @apply text-[20px] leading-[24px];
@@ -54,11 +60,8 @@
     .text-nav {
       @apply text-[30px] leading-[36px];
     }
-    .text-common {
+    .text-small {
       @apply text-[24px] leading-[34px];
-    }
-    .text-common, .text-small {
-      @apply text-[24px] leading-[34px] tracking-tight;
     }
   }
 

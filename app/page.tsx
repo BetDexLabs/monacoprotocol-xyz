@@ -1,5 +1,4 @@
-import { Hero, TrustedBy } from "@/app/components";
-import { TradingIntegrations } from "./components/TradingIntegrations";
+import { Banner, Hero, TradingIntegrations, TrustedBy } from "@/app/components";
 
 export default function Home() {
   return (
@@ -7,6 +6,7 @@ export default function Home() {
       <Hero />
       <TrustedBy />
       <TradingIntegrations />
+      <Banner caption="Learn more about trading on Monaco" />
     </main>
   );
 }
