@@ -20,7 +20,7 @@
     @apply text-[16px] leading-[1.25] font-semibold
   }
   .text-common {
-    @apply text-[16px] leading-[1] font-normal tracking-tight;
+    @apply text-[16px] leading-[1.5] font-normal tracking-tight;
   }
   .text-small {
     @apply text-[14px] leading-[20px] font-normal tracking-tight;
@@ -85,7 +85,10 @@
   @screen xxl {
     .horizontal-padding {
       @apply px-28
-    } 
+    }
+    .vertical-section-padding {
+      @apply py-12
+    }
   }
 
   /* section */

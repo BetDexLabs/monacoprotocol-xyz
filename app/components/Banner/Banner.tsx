@@ -9,7 +9,7 @@ type BannerProps = {
 };
 
 export const Banner: FC<BannerProps> = ({ caption }) => (
-  <section className="section py-[38px] xxl:py-16">
+  <section className="section py-[38px]">
     <div className="flex flex-col p-5 gap-5 bg-accent rounded-[20px] md:p-8 md:gap-8 md:rounded-[30px] xxl:flex-row xxl:justify-between xxl:gap-14 xxl:p-14">
       <div className="flex items-center md:gap-6">
         <h3 className="text-caption">{caption}</h3>
