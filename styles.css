@@ -5,19 +5,22 @@
 @layer components {
   /* texts */
   .page-heading {
-    @apply text-[32px] leading-[1] font-semibold tracking-tighter;
+    @apply text-[32px] leading-[1.25] font-semibold tracking-tighter;
   }
   .text-heading {
-    @apply text-[24px] leading-[1] font-semibold tracking-tighter;
+    @apply text-[24px] leading-[1.25] font-semibold tracking-tighter;
   }
-  .text-subheading, .text-subheading-expanded {
-    @apply text-[16px] leading-[20px] font-semibold;
+  .text-subheading {
+    @apply text-[16px] leading-[1.25] font-semibold;
   }
   .text-nav {
     @apply text-[16px] font-semibold;
   }
   .text-common {
-    @apply text-[14px] leading-[20px] font-normal;
+    @apply text-[16px] leading-[24px] font-normal tracking-tight;
+  }
+  .text-small {
+    @apply text-[14px] leading-[20px] font-normal tracking-tight;
   }
 
   @screen md {
@@ -27,11 +30,14 @@
     .text-heading {
       @apply text-[64px];
     }
-    .text-subheading, .text-subheading-expanded {  
-      @apply text-[32px] leading-[40px] tracking-[-2px];
+    .text-subheading {  
+      @apply text-[32px] tracking-[-2px];
     }
     .text-common {
-      @apply text-[20px] leading-[24px] tracking-tight;
+      @apply text-[24px] leading-[34px] tracking-tight;
+    }
+    .text-small {
+      @apply text-[20px] leading-[24px];
     }
   }
 
@@ -43,16 +49,16 @@
       @apply text-[125px];
     }
     .text-subheading {
-      @apply text-[48px] leading-[48px] tracking-[-2px];
-    }
-    .text-subheading-expanded {
-      @apply text-[48px] leading-[54px] tracking-[-2px];
+      @apply text-[48px] leading-[1.12];
     }
     .text-nav {
       @apply text-[30px] leading-[36px];
     }
     .text-common {
       @apply text-[24px] leading-[34px];
+    }
+    .text-common, .text-small {
+      @apply text-[24px] leading-[34px] tracking-tight;
     }
   }
 

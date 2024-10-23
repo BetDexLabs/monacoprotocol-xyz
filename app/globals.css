@@ -33,7 +33,7 @@ body {
 .heading-dark { 
   background: var(--gradient-blue-to-purple)
 }
-.heading-light{ 
+.heading-light { 
   background: var(--gradient-light-blue-to-purple)
 }
 .heading-neutral {

@@ -21,7 +21,7 @@ const config: Config = {
       },
       maxWidth: {
         "max-page": "1920px",
-        "max-content": "1285px",
+        "max-content": "1284px",
       },
       screens: {
         sm: "320px",
