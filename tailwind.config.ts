@@ -14,6 +14,7 @@ const config: Config = {
         tertiary: "var(--gray-400)",
         supportive: "var(--gray-200)",
         "blurred-bg": "var(--dark-indigo-transparent)",
+        "article-bg": "var(--coal-transparent)",
       },
       backgroundImage: {
         main: "var(--gradient-dark-purple)",

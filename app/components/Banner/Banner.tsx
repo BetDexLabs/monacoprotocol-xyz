@@ -1,3 +1,4 @@
+"use client";
 import { LinkButton } from "@/app/common";
 import { RightArrow } from "@/icons";
 import { FC } from "react";
