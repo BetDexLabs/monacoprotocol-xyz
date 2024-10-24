@@ -22,13 +22,13 @@ const config: Config = {
       },
       maxWidth: {
         "max-page": "1920px",
-        "max-content": "1284px",
+        "max-content": "1056px",
+        "max-content-xxl": "1284px",
       },
       screens: {
         sm: "320px",
         md: "672px",
-        // lg: "1056px",
-        // xl: "1312px",
+        lg: "1284px",
         xxl: "1920px",
       },
     },

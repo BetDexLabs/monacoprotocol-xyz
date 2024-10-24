@@ -12,7 +12,7 @@ export const Header: FC = () => {
   return (
     <header className="max-w-max-page mx-auto relative">
       <div
-        className={`transition-transform duration-300 ease-in-out fixed z-10 top-0 left-0 w-full transform ${isBurgerMenuOpened ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} bg-main fixed w-full xxl:hidden`}
+        className={`transition-transform duration-300 ease-in-out fixed z-10 top-0 left-0 w-full transform ${isBurgerMenuOpened ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} bg-main fixed w-full lg:hidden`}
       >
         <div className="blurred-wrapper">
           <div className="flex justify-between items-center gap-24 horizontal-padding py-7 md:py-9">
@@ -24,7 +24,7 @@ export const Header: FC = () => {
               <Cross size="small" />
             </div>
             <div
-              className="hidden md:block xxl:hidden cursor-pointer "
+              className="hidden md:block lg:hidden cursor-pointer "
               onClick={() => toggleBurgerMenu(false)}
             >
               <Cross />
@@ -56,9 +56,9 @@ export const Header: FC = () => {
           "flex justify-between items-center gap-24 horizontal-padding py-7 md:py-9 xxl:py-12"
         }
       >
-        <div className="flex xxl:gap-24">
+        <div className="flex lg:gap-20 xxl:gap-24">
           <MonacoLogo />
-          <ul className="hidden xxl:flex gap-12 items-center">
+          <ul className="hidden lg:flex gap-12 items-center">
             {navItems.map(
               ({ label, href }, i) =>
                 i !== navItems.length - 1 && (
@@ -78,12 +78,12 @@ export const Header: FC = () => {
           <BurgerMenu size="small" />
         </div>
         <div
-          className="hidden md:block xxl:hidden cursor-pointer "
+          className="hidden md:block lg:hidden cursor-pointer "
           onClick={() => toggleBurgerMenu(true)}
         >
           <BurgerMenu />
         </div>
-        <div className="hidden xxl:block text-nav cursor-pointer">
+        <div className="hidden lg:block text-nav cursor-pointer">
           <Link href={contactTeamItem.href}>
             <span className="inline-flex items-center md:gap-2.5">
               {contactTeamItem.label} <RightArrow className="w-[28px]" />

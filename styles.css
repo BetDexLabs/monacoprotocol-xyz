@@ -96,14 +96,19 @@
 
   /* section */
   .section {
-    @apply flex flex-col gap-8 horizontal-padding vertical-section-padding max-w-max-content box-content mx-auto
+    @apply flex flex-col gap-8 horizontal-padding vertical-section-padding box-content mx-auto
   }
   .blurred-wrapper {
     @apply bg-blurred-bg backdrop-blur-[50px] w-full
   }
+  @screen lg {
+    .section {
+      @apply max-w-max-content
+    }
+  }
   @screen xxl {
     .section {
-      @apply gap-12
+      @apply gap-12 max-w-max-content-xxl
     }
   }
 }
