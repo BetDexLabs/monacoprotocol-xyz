@@ -39,6 +39,9 @@
     .text-caption {
       @apply text-[30px];
     }
+    .text-nav {
+      @apply text-[24px];
+    }
     .text-common {
       @apply text-[24px];
     }

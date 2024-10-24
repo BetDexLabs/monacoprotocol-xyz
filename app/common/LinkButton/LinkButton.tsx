@@ -19,7 +19,7 @@ export const LinkButton: FC<ButtonProps> = ({
 }) => {
   const styles = `${
     variant === "dark" ? "bg-accent text-supportive" : "bg-white text-secondary"
-  } text-small tracking-normal rounded-full py-1.5 px-7 font-semibold pointer md:py-2.5 md:px-9 xxl:py-[18px] xxl:px-[68px]`;
+  } text-small tracking-normal rounded-full py-1.5 px-7 font-semibold cursor-pointer md:py-2.5 md:px-9 xxl:py-[18px] xxl:px-[68px]`;
 
   const wrapStyles = `flex justify-${align}`;
 
