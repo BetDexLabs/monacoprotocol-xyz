@@ -1,6 +1,6 @@
 # monacoprotocol-xyz
 
-npx create-next-app@latest ./  --ts --use-npm
+npx create-next-app@latest ./ --ts --use-npm
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

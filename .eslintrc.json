@@ -16,8 +16,8 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "eol-last": ["error", "always"] // Ensure there's one newline at the end
   },
   "plugins": ["@typescript-eslint", "prettier"]
-
 }

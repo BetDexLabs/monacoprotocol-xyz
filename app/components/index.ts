@@ -8,4 +8,3 @@ export * from "./Hero";
 export * from "./OtherProducts";
 export * from "./TradingIntegrations";
 export * from "./TrustedBy";
-

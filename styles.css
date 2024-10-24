@@ -17,7 +17,7 @@
     @apply text-[16px] font-semibold;
   }
   .text-caption {
-    @apply text-[16px] leading-[1.25] font-semibold
+    @apply text-[16px] leading-[1.25] font-semibold;
   }
   .text-common {
     @apply text-[16px] leading-[1.5] font-normal tracking-tight;
@@ -33,7 +33,7 @@
     .text-heading {
       @apply text-[64px];
     }
-    .text-subheading {  
+    .text-subheading {
       @apply text-[32px] tracking-[-2px];
     }
     .text-caption {
@@ -70,46 +70,45 @@
 
   /* paddings */
   .horizontal-padding {
-    @apply px-4
+    @apply px-4;
   }
   .vertical-section-padding {
-    @apply py-3
+    @apply py-3;
   }
 
   @screen md {
     .horizontal-padding {
-      @apply px-9
+      @apply px-9;
     }
     .vertical-section-padding {
-      @apply py-9
+      @apply py-9;
     }
   }
 
   @screen xxl {
     .horizontal-padding {
-      @apply px-28
+      @apply px-28;
     }
     .vertical-section-padding {
-      @apply py-12
+      @apply py-12;
     }
   }
 
   /* section */
   .section {
-    @apply flex flex-col gap-8 horizontal-padding vertical-section-padding box-content mx-auto
+    @apply flex flex-col gap-8 horizontal-padding vertical-section-padding box-content mx-auto;
   }
   .blurred-wrapper {
-    @apply bg-blurred-bg backdrop-blur-[50px] w-full
+    @apply bg-blurred-bg backdrop-blur-[50px] w-full;
   }
   @screen lg {
     .section {
-      @apply max-w-max-content
+      @apply max-w-max-content;
     }
   }
   @screen xxl {
     .section {
-      @apply gap-12 max-w-max-content-xxl
+      @apply gap-12 max-w-max-content-xxl;
     }
   }
 }
-
