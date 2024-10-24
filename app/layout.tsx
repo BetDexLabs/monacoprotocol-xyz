@@ -1,7 +1,7 @@
 import { Footer, Header } from "@/app/components";
 import type { Metadata } from "next";
-import "../styles.css";
 import "./globals.css";
+import "./styles.css";
 
 export const metadata: Metadata = {
   title: "The Monaco Protocol",

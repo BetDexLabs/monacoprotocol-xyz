@@ -7,10 +7,10 @@ import { FC } from "react";
 export const Hero: FC = () => (
   <section className="section">
     <h1 className="page-heading text-center">Monaco Protocol</h1>
-    <h3 className="text-subheading heading-neutral text-center lg:max-w-[720px] xxl:max-w-[1200px] mx-auto">
+    <h2 className="text-subheading heading-neutral text-center lg:max-w-[720px] xxl:max-w-[1200px] mx-auto">
       An open-sourced, transparent, and permissionless liquidity pool for
       betting and prediction markets.
-    </h3>
+    </h2>
     <p className="text-center text-small mx-auto lg:max-w-3xl	 xxl:max-w-6xl">
       Bet directly into a{" "}
       <strong className="font-extrabold">global liquidity</strong> pool with{" "}
