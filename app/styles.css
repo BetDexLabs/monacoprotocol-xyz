@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* texts */
+  .page-heading {
+    @apply text-[32px] leading-[1.25] font-semibold tracking-tighter;
+  }
+  .text-heading {
+    @apply text-[24px] leading-[1.25] font-semibold tracking-tighter;
+  }
+  .text-subheading {
+    @apply text-[16px] leading-[1.25] font-semibold;
+  }
+  .text-nav {
+    @apply text-[16px] font-semibold;
+  }
+  .text-caption {
+    @apply text-[16px] leading-[1.25] font-semibold;
+  }
+  .text-common {
+    @apply text-[16px] leading-[1.5] font-normal tracking-tight;
+  }
+  .text-small {
+    @apply text-[14px] leading-[20px] font-normal tracking-tight;
+  }
+
+  @screen md {
+    .page-heading {
+      @apply text-[64px];
+    }
+    .text-heading {
+      @apply text-[64px];
+    }
+    .text-subheading {
+      @apply text-[32px] tracking-[-2px];
+    }
+    .text-caption {
+      @apply text-[30px];
+    }
+    .text-nav {
+      @apply text-[24px];
+    }
+    .text-common {
+      @apply text-[24px];
+    }
+    .text-small {
+      @apply text-[20px] leading-[24px];
+    }
+  }
+
+  @screen xxl {
+    .page-heading {
+      @apply text-[125px];
+    }
+    .text-heading {
+      @apply text-[125px];
+    }
+    .text-subheading {
+      @apply text-[48px] leading-[1.12];
+    }
+    .text-nav {
+      @apply text-[30px] leading-[36px];
+    }
+    .text-small {
+      @apply text-[24px] leading-[34px];
+    }
+  }
+
+  /* paddings */
+  .horizontal-padding {
+    @apply px-4;
+  }
+  .vertical-section-padding {
+    @apply py-3;
+  }
+
+  @screen md {
+    .horizontal-padding {
+      @apply px-9;
+    }
+    .vertical-section-padding {
+      @apply py-9;
+    }
+  }
+
+  @screen xxl {
+    .horizontal-padding {
+      @apply px-28;
+    }
+    .vertical-section-padding {
+      @apply py-12;
+    }
+  }
+
+  /* section */
+  .section {
+    @apply flex flex-col gap-8 horizontal-padding vertical-section-padding box-content mx-auto;
+  }
+  .blurred-wrapper {
+    @apply bg-blurred-bg backdrop-blur-[50px] w-full;
+  }
+  @screen lg {
+    .section {
+      @apply max-w-max-content;
+    }
+  }
+  @screen xxl {
+    .section {
+      @apply gap-12 max-w-max-content-xxl;
+    }
+  }
+}
