@@ -1,3 +1,6 @@
+import monacoMobile from "@/public/monaco-icon-mobile.png";
+import monacoDesktop from "@/public/monaco-icon.png";
+
 import Image from "next/image";
 import { FC } from "react";
 
@@ -5,17 +8,15 @@ export const MonacoLogo: FC = () => (
   <>
     <Image
       className="hidden xxl:block"
-      src="/monaco-icon.png"
+      src={monacoDesktop}
       width={88}
       height={67}
       alt="The Monaco Protocol icon"
     />
-    <div className="max-w-8 md:max-w-12 xxl:hidden">
+    <div className="w-8 h-auto md:w-12 xxl:hidden">
       <Image
-        className="w-100"
-        src="/monaco-icon-mobile.png"
-        width={48}
-        height={46}
+        className="w-full"
+        src={monacoMobile}
         alt="The Monaco Protocol icon"
       />
     </div>

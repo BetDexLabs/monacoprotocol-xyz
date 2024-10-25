@@ -16,7 +16,7 @@ export const Cross = ({ size = "default" }: CrossIconProps) => (
       y2="20"
       stroke="currentColor"
       strokeWidth="3"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
     <line
       x1="20"
@@ -25,7 +25,7 @@ export const Cross = ({ size = "default" }: CrossIconProps) => (
       y2="20"
       stroke="currentColor"
       strokeWidth="3"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
   </svg>
 );
