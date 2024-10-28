@@ -19,8 +19,8 @@ export const BuildOnMonaco: FC = () => (
             <Image
               src="/buildOnMonaco/side-image.png"
               alt="Purebet & Betdex illustration"
-              objectFit="contain"
-              objectPosition="right"
+              className="object-contain object-right"
+              sizes="(max-width: 672px) 304px, (max-width: 1920px) 638px, 952px"
               fill
             />
           </div>
@@ -32,13 +32,12 @@ export const BuildOnMonaco: FC = () => (
               key={`benefit-${i}`}
               className="flex flex-col gap-4 p-4 bg-article-bg backdrop-blur-[60px] rounded-[30px] md:p-8 md:gap-8 xxl:py-20 lg:max-w-[540px] lg:w-full xxl:px-6 xxl:gap-6"
             >
-              <div className="relative h-[50px] md:h-[100px]">
+              <div className="w-auto h-[50px] md:h-[100px]">
                 <Image
-                  src={icon}
+                  src={icon.src}
                   alt="Buils with Monaco illustration"
-                  objectFit="contain"
-                  objectPosition="left"
-                  fill
+                  width={icon.width}
+                  height={icon.height}
                 />
               </div>
               <h3 className="text-subheading">{title}</h3>

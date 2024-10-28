@@ -15,12 +15,7 @@ export const TradingIntegrations: FC = () => (
           className="flex flex-col gap-4 md:gap-7 xxl:flex-row xxl:gap-24"
         >
           <figure className="max-w-[50px] h-auto w-full md:max-w-[100px]">
-            <Image
-              src={icon}
-              alt={`trading illustration ${i}`}
-              width={100}
-              height={100}
-            />
+            <Image src={icon} alt={`trading illustration ${i}`} />
           </figure>
           <div className="flex flex-col gap-4 md:gap-7 xxl:gap-8">
             <h3 className="text-subheading">{title}</h3>
