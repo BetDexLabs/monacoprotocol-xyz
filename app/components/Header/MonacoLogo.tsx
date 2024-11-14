@@ -6,14 +6,14 @@ import { FC } from "react";
 
 export const MonacoLogo: FC = () => (
   <>
-    <Image
-      className="hidden xxl:block"
-      src={monacoDesktop}
-      width={88}
-      height={67}
-      alt="The Monaco Protocol icon"
-    />
-    <div className="w-8 h-auto md:w-12 xxl:hidden">
+    <div className="hidden h-auto w-[54px] xxl:w-[88px] lg:block">
+      <Image
+        className="w-full"
+        src={monacoDesktop}
+        alt="The Monaco Protocol icon"
+      />
+    </div>
+    <div className="w-8 h-auto md:w-12 lg:hidden">
       <Image
         className="w-full"
         src={monacoMobile}

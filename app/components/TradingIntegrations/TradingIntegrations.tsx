@@ -29,7 +29,7 @@ export const TradingIntegrations: FC = () => (
                 <Image src={icon} alt={`trading illustration ${i}`} />
               </figure>
             }
-            className="md:w-[600px]"
+            className="lg:w-[600px]"
             {...integration}
           />
         ))}
