@@ -18,7 +18,7 @@ export const Hero: FC = () => (
       own betting applications, create and settle betting markets, and more!
     </p>
     <LinkButton href="/" label="Contact team" align="center" />
-    <Link href="/target-page" passHref>
+    <Link href="https://docs.monacoprotocol.xyz" passHref>
       <div className="flex justify-center items-center gap-2.5">
         <p className="text-[16px] font-semibold max-w-[180px] md:max-w-full md:text-[20px] xxl:text-[24px]">
           Learn more about what you can build
