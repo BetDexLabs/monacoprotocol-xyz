@@ -19,6 +19,7 @@ const config: Config = {
       backgroundImage: {
         main: "var(--gradient-dark-purple)",
         accent: "var(--gradient-blue-to-purple)",
+        banner: "var(--gradient-dark-purple-to-black)",
       },
       maxWidth: {
         "max-page": "1920px",

@@ -19,6 +19,7 @@
     #109ef6 0%,
     #4337f9 100%
   );
+  --gradient-dark-purple-to-black: linear-gradient(270deg, #371F7A 0%, #090514 100%);
   --gradient-white-to-gray: linear-gradient(135deg, #ffffff 0%, #71717a 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   --dark-indigo-transparent: rgba(11, 4, 30, 0.3);
