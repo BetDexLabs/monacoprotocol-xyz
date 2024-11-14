@@ -1,4 +1,5 @@
 "use client";
+import { Card } from "@/app/common";
 import Image from "next/image";
 import { FC } from "react";
 import { benefits } from "./constants";
@@ -27,22 +28,21 @@ export const BuildOnMonaco: FC = () => (
         </div>
 
         <div className="flex flex-col gap-8">
-          {benefits.map(({ icon, title, description }, i) => (
-            <article
+          {benefits.map(({ icon, ...benefit }, i) => (
+            <Card
               key={`benefit-${i}`}
-              className="flex flex-col gap-4 p-4 bg-article-bg backdrop-blur-[60px] rounded-[30px] md:p-8 md:gap-8 xxl:py-20 lg:max-w-[540px] lg:w-full xxl:px-6 xxl:gap-6"
-            >
-              <div className="w-auto h-[50px] md:h-[100px]">
-                <Image
-                  src={icon.src}
-                  alt="Buils with Monaco illustration"
-                  width={icon.width}
-                  height={icon.height}
-                />
-              </div>
-              <h3 className="text-subheading">{title}</h3>
-              <p className="text-small text-tertiary">{description}</p>
-            </article>
+              image={
+                <div className="w-auto h-[50px] md:h-[100px]">
+                  <Image
+                    src={icon.src}
+                    alt="Benefit illustration"
+                    width={icon.width}
+                    height={icon.height}
+                  />
+                </div>
+              }
+              {...benefit}
+            />
           ))}
         </div>
       </div>

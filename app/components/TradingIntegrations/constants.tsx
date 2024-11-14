@@ -1,7 +1,11 @@
+import illustration1 from "@/public/tradingIntegrations/illustration1.png";
+import illustration2 from "@/public/tradingIntegrations/illustration2.png";
+import illustration3 from "@/public/tradingIntegrations/illustration3.png";
 import image1 from "@/public/tradingIntegrations/trading1.png";
 import image2 from "@/public/tradingIntegrations/trading2.png";
 import image3 from "@/public/tradingIntegrations/trading3.png";
 import image4 from "@/public/tradingIntegrations/trading4.png";
+
 import { StaticImageData } from "next/image";
 
 type IntegrationProps = {
@@ -10,7 +14,7 @@ type IntegrationProps = {
   description: string;
 };
 
-export const integrations: IntegrationProps[] = [
+export const integrationArticles: IntegrationProps[] = [
   {
     icon: image1,
     title: "Trade anywhere in the world with no restrictions",
@@ -36,3 +40,5 @@ export const integrations: IntegrationProps[] = [
       "With Monaco, you can trade directly into a permissionless liquidity pool with no KYC.",
   },
 ];
+
+export const integrationImages = [illustration1, illustration2, illustration3];
