@@ -18,6 +18,7 @@ const config: Config = {
         "blurred-bg": "var(--dark-indigo-transparent)",
         "dropdown-active-bg": "var(--black-900)",
         "dropdown-bg": "var(--gray-600)",
+        "nav-bg-mobile": "var(--black)",
         "article-bg": "var(--coal-transparent)",
       },
       backgroundImage: {

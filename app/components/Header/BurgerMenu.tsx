@@ -1,7 +1,6 @@
-import { Cross, RightArrow } from "@/icons";
+import { ArrowDown, ArrowUp, Cross } from "@/icons";
 import Link from "next/link";
-import { FC } from "react";
-import { MonacoLogo } from "./MonacoLogo";
+import { FC, useState } from "react";
 import { navItems } from "./constants";
 
 type BurgerMenuProps = {
@@ -9,50 +8,79 @@ type BurgerMenuProps = {
   handleClose: () => void;
 };
 
-export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => (
-  <div
-    className={`transition-transform duration-300 ease-in-out fixed z-10 top-0 left-0 w-full transform ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} bg-main fixed w-full lg:hidden`}
-  >
-    <div className="blurred-wrapper">
-      <div className="flex justify-between items-center gap-24 horizontal-padding py-7 md:py-9">
-        <MonacoLogo />
-        <div className="md:hidden cursor-pointer" onClick={handleClose}>
-          <Cross size="small" />
+export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
+  const [openedDropdowns, toggleDropdown] = useState<string[]>([]);
+
+  const handleInnerItemClick = (id: string) => {
+    if (openedDropdowns.includes(id)) {
+      toggleDropdown((prev) => prev.filter((item) => item !== id));
+    } else {
+      toggleDropdown((prev) => [...prev, id]);
+    }
+  };
+
+  return (
+    <div
+      className={`absolute z-50 top-0 left-0 h-screen w-full transform transition-transform duration-30 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"} lg:hidden`}
+    >
+      <div className="bg-nav-bg-mobile h-full w-full overflow-scroll">
+        <div className="flex justify-end horizontal-padding py-6">
+          <div className="md:hidden cursor-pointer" onClick={handleClose}>
+            <Cross size="small" />
+          </div>
+          <div className="hidden md:block cursor-pointer" onClick={handleClose}>
+            <Cross />
+          </div>
         </div>
-        <div className="hidden md:block cursor-pointer " onClick={handleClose}>
-          <Cross />
-        </div>
-      </div>
-      <div className="flex w-full horizontal-padding">
-        <ul className="flex flex-col justify-center w-full pb-[36px] md:pb-[42px] gap-4">
-          {navItems.map(({ id, label, href, arrowRight, innerItems }) => (
-            <li key={id} className="w-full">
-              {href && (
-                <Link href={href}>
-                  <div className="flex text-nav">
-                    <span className="w-full inline-flex justify-center items-center gap-2 md:gap-2.5">
-                      {label}{" "}
-                      {arrowRight && (
-                        <RightArrow className="w-[7px] md:w-[10px]" />
+        <div className="flex w-full horizontal-padding">
+          <ul className="flex flex-col w-full pb-6 gap-6 pr-1">
+            {navItems.map(({ id, label, href, innerItems }) => {
+              const isCurrentSectionOpened = openedDropdowns.includes(id);
+
+              return (
+                <li key={id} className="w-full">
+                  {href ? (
+                    <Link href={href}>
+                      <div className="flex text-nav">
+                        <span>{label}</span>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div
+                      className="flex text-nav gap-3 justify-between"
+                      onClick={() => handleInnerItemClick(id)}
+                    >
+                      <span>{label}</span>
+                      {innerItems?.length && (
+                        <div className="flex h-[24px] max-w-[12px] w-full items-center">
+                          {isCurrentSectionOpened ? <ArrowUp /> : <ArrowDown />}
+                        </div>
                       )}
-                    </span>
-                  </div>
-                </Link>
-              )}
-              {innerItems && (
-                <div className="flex text-nav" onClick={() => {}}>
-                  <span className="w-full inline-flex justify-center items-center gap-2 md:gap-2.5">
-                    {label}{" "}
-                    {arrowRight && (
-                      <RightArrow className="w-[7px] md:w-[10px]" />
-                    )}
-                  </span>
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
+                    </div>
+                  )}
+                  {innerItems?.length && isCurrentSectionOpened && (
+                    <ul className="pt-3.5">
+                      {innerItems.map((innerItem, i) => (
+                        <li
+                          key={`${id}-${i}`}
+                          className="bg-transition hover:bg-dropdown-active-bg"
+                        >
+                          <Link href={innerItem.href}>
+                            <div className="flex gap-3.5 nav-dropdown py-3">
+                              {innerItem.icon}
+                              <span className="">{innerItem.title}</span>
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};

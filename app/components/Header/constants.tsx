@@ -71,10 +71,11 @@ export const navItems: NavItem[] = [
     label: "Roadmap",
     href: "https://app.gitbook.com/o/QXqMMSlR6dqssLlaKHzO/s/Vfpc0TGdiWkYLfDmsn6Y/readme/the-roadmap",
   },
-  {
-    id: "contact-team",
-    label: "Contact team",
-    href: emailLink,
-    arrowRight: true,
-  },
 ];
+
+export const contactItem: NavItem = {
+  id: "contact-team",
+  label: "Contact team",
+  href: emailLink,
+  arrowRight: true,
+};
