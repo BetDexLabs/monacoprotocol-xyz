@@ -14,7 +14,7 @@ interface NavItem {
   label: string;
   href?: string;
   arrowRight?: boolean;
-  innerItems?: { icon: ReactNode; title: string }[];
+  innerItems?: { icon: ReactNode; title: string; href: string }[];
 }
 
 export const navItems: NavItem[] = [
@@ -22,18 +22,42 @@ export const navItems: NavItem[] = [
     id: "use-case",
     label: "Use Cases",
     innerItems: [
-      { icon: <ChartUp />, title: "Trading Integrations" },
-      { icon: <SquareCode />, title: "Applications and Services" },
+      {
+        icon: <ChartUp />,
+        title: "Trading Integrations",
+        href: "#trading-integrations",
+      },
+      {
+        icon: <SquareCode />,
+        title: "Applications and Services",
+        href: "#applications-and-services",
+      },
     ],
   },
   {
     id: "developer-resources",
     label: "Developer Resources",
     innerItems: [
-      { icon: <BookSharp />, title: "Protocol Docs" },
-      { icon: <Github />, title: "GitHub" },
-      { icon: <Discord />, title: "Discord" },
-      { icon: <Twitter />, title: "Twitter" },
+      {
+        icon: <BookSharp />,
+        title: "Protocol Docs",
+        href: "https://docs.monacoprotocol.xyz",
+      },
+      {
+        icon: <Github />,
+        title: "GitHub",
+        href: "https://github.com/MonacoProtocol",
+      },
+      {
+        icon: <Discord />,
+        title: "Discord",
+        href: "https://discord.gg/8mR7bbBMP6",
+      },
+      {
+        icon: <Twitter />,
+        title: "Twitter",
+        href: "https://twitter.com/MonacoProtocol",
+      },
     ],
   },
   { id: "blog", label: "Blog", href: "https://medium.com/@monacoprotocol" },
@@ -42,7 +66,11 @@ export const navItems: NavItem[] = [
     label: "Points",
     href: "https://www.monacoprotocol.xyz/points",
   },
-  { id: "roadmap", label: "Roadmap", href: "/" },
+  {
+    id: "roadmap",
+    label: "Roadmap",
+    href: "https://app.gitbook.com/o/QXqMMSlR6dqssLlaKHzO/s/Vfpc0TGdiWkYLfDmsn6Y/readme/the-roadmap",
+  },
   {
     id: "contact-team",
     label: "Contact team",

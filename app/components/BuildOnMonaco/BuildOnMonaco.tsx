@@ -5,7 +5,7 @@ import { FC } from "react";
 import { benefits } from "./constants";
 
 export const BuildOnMonaco: FC = () => (
-  <section className="lg:relative">
+  <section className="lg:relative" id="applications-and-services">
     <div className="section">
       <h2 className="heading-dark text-heading text-center">
         What can you build on Monaco?

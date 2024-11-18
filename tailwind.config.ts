@@ -13,7 +13,11 @@ const config: Config = {
         secondary: "var(--blue-500)",
         tertiary: "var(--gray-400)",
         supportive: "var(--gray-200)",
+        active: "var(--gray-300)",
+        border: "var(--gray-500)",
         "blurred-bg": "var(--dark-indigo-transparent)",
+        "dropdown-active-bg": "var(--black-900)",
+        "dropdown-bg": "var(--gray-600)",
         "article-bg": "var(--coal-transparent)",
       },
       backgroundImage: {

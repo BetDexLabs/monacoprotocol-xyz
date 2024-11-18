@@ -5,7 +5,7 @@ import { FC } from "react";
 import { integrationArticles, integrationImages } from "./constants";
 
 export const TradingIntegrations: FC = () => (
-  <section className="section md:gap-12">
+  <section className="section md:gap-12" id="trading-integrations">
     <h2 className="text-heading heading-dark text-center">
       Trading Integrations
     </h2>

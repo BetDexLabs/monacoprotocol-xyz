@@ -112,3 +112,29 @@
     }
   }
 }
+
+/* transition */
+.common-transition {
+  @apply transition-all duration-500 ease-in-out
+}
+
+.text-transition {
+  @apply transition-colors duration-500 ease-in-out
+}
+
+.bg-transition {
+  @apply transition-colors duration-500 ease-in-out
+
+}
+
+/* reusable cases */
+.nav-dropdown {
+ @apply text-[#D3D3D3] text-[16px] leading-[20px] hover:text-primary text-transition
+}
+@screen xxl {
+  .nav-dropdown {
+    @apply text-[18px] leading-[22px]
+  }
+}
+
+
