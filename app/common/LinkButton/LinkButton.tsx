@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { FC } from "react";
 
 type ButtonProps = {
@@ -24,9 +23,9 @@ export const LinkButton: FC<ButtonProps> = ({
   const wrapStyles = `flex justify-${align}`;
 
   return (
-    <Link href={href} className={wrapStyles}>
+    <a href={href} className={wrapStyles}>
       <button className={`${styles} hidden md:block`}>{label}</button>
       <button className={`${styles} md:hidden`}>{mobileLabel || label}</button>
-    </Link>
+    </a>
   );
 };

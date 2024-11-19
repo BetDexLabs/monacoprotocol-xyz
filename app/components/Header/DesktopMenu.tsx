@@ -81,12 +81,12 @@ export const DesktopMenu = () => {
       </div>
       {contactItem.href && (
         <div className="text-nav cursor-pointer">
-          <Link href={contactItem.href}>
+          <a href={contactItem.href}>
             <span className="inline-flex items-center text-transition hover:text-active gap-2.5 xxl:gap-3">
               {contactItem.label}{" "}
               <RightArrow className="h-[22px] w-auto xxl:h-[28px]" />
             </span>
-          </Link>
+          </a>
         </div>
       )}
     </div>
