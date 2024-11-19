@@ -14,6 +14,7 @@ const config: Config = {
         tertiary: "var(--gray-400)",
         supportive: "var(--gray-200)",
         active: "var(--gray-300)",
+        link: "var(--blue-600)",
         border: "var(--gray-500)",
         "blurred-bg": "var(--dark-indigo-transparent)",
         "dropdown-active-bg": "var(--black-900)",

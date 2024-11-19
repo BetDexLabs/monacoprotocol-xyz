@@ -12,7 +12,7 @@ export const DesktopMenu = () => {
     toggleDropdown(null);
   });
 
-  const handleInnerItemClick = (id: string) => {
+  const handleDropdownSectionClick = (id: string) => {
     if (id === openDropdownId) {
       toggleDropdown(null);
     } else {
@@ -34,49 +34,47 @@ export const DesktopMenu = () => {
           {navItems.map(({ id, label, href, innerItems }, i) => {
             const isCurrentSectionOpened = openDropdownId === id;
             return (
-              i !== navItems.length - 1 && (
-                <li key={`${label}-${i}`} className="relative">
-                  {href ? (
-                    <Link href={href}>
-                      <div className="flex text-nav text-transition hover:text-active">
-                        <span>{label}</span>
-                      </div>
-                    </Link>
-                  ) : (
-                    <div
-                      className={`flex text-nav gap-3 text-transition hover:text-active ${isCurrentSectionOpened ? "text-active" : "text-primary"}`}
-                      onClick={() => handleInnerItemClick(id)}
-                      ref={outsideClickRef}
-                    >
+              <li key={`${label}-${i}`} className="relative">
+                {href ? (
+                  <Link href={href}>
+                    <div className="flex text-nav text-transition hover:text-active">
                       <span>{label}</span>
-                      {innerItems?.length && (
-                        <div className="flex h-[24px] max-w-[18px] w-full items-end xxl:h-[26px] xxl:max-w-[22px]">
-                          {isCurrentSectionOpened ? <ArrowUp /> : <ArrowDown />}
-                        </div>
-                      )}
                     </div>
-                  )}
-                  {innerItems?.length && isCurrentSectionOpened && (
-                    <ul
-                      className={`absolute top-full left-0 z-10 border rounded-lg border-border min-w-full w-max bg-dropdown-bg overflow-hidden mt-2 xxl:mt-6 common-transition ${isCurrentSectionOpened ? "visible" : "invisible"}`}
-                    >
-                      {innerItems.map((innerItem, i) => (
-                        <li
-                          key={`${id}-${i}`}
-                          className="bg-transition hover:bg-dropdown-active-bg"
-                        >
-                          <Link href={innerItem.href}>
-                            <div className="flex gap-3.5 nav-dropdown px-4 py-5">
-                              {innerItem.icon}
-                              <span className="">{innerItem.title}</span>
-                            </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              )
+                  </Link>
+                ) : (
+                  <div
+                    className={`flex text-nav gap-3 text-transition hover:text-active ${isCurrentSectionOpened ? "text-active" : "text-primary"}`}
+                    onClick={() => handleDropdownSectionClick(id)}
+                  >
+                    <span>{label}</span>
+                    {innerItems?.length && (
+                      <div className="flex h-[24px] max-w-[18px] w-full items-end xxl:h-[26px] xxl:max-w-[22px]">
+                        {isCurrentSectionOpened ? <ArrowUp /> : <ArrowDown />}
+                      </div>
+                    )}
+                  </div>
+                )}
+                {innerItems?.length && isCurrentSectionOpened && (
+                  <ul
+                    className={`absolute top-full left-0 z-10 border rounded-lg border-border min-w-full w-max bg-dropdown-bg overflow-hidden mt-2 xxl:mt-6 common-transition ${isCurrentSectionOpened ? "visible" : "invisible"}`}
+                    ref={outsideClickRef}
+                  >
+                    {innerItems.map((innerItem, i) => (
+                      <li
+                        key={`${id}-${i}`}
+                        className="bg-transition hover:bg-dropdown-active-bg"
+                      >
+                        <Link href={innerItem.href}>
+                          <div className="flex gap-3.5 nav-dropdown px-4 py-5">
+                            {innerItem.icon}
+                            <span className="">{innerItem.title}</span>
+                          </div>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
             );
           })}
         </ul>

@@ -1,5 +1,5 @@
 "use client";
-import { LinkButton } from "@/app/common";
+import { emailLink, LinkButton } from "@/app/common";
 import { RightArrow } from "@/icons";
 import Link from "next/link";
 import { FC } from "react";
@@ -17,7 +17,7 @@ export const Hero: FC = () => (
       <strong className="font-extrabold">no restrictions</strong>, build your
       own betting applications, create and settle betting markets, and more!
     </p>
-    <LinkButton href="/" label="Contact team" align="center" />
+    <LinkButton href={emailLink} label="Contact team" align="center" />
     <Link href="https://docs.monacoprotocol.xyz" passHref>
       <div className="flex justify-center items-center gap-2.5">
         <p className="text-[16px] font-semibold max-w-[180px] md:max-w-full md:text-[20px] xxl:text-[24px]">

@@ -4,8 +4,8 @@ import Link from "next/link";
 import { FC } from "react";
 
 export const TrustedBy: FC = () => (
-  <section className="blurred-wrapper">
-    <div className="section py-5 md:py-9 xxl:gap-9 my-12 xxl:py-11">
+  <section className="blurred-section">
+    <div className="section xxl:gap-9">
       <h3 className="heading-dark text-subheading text-center">Trusted by</h3>
       <div className="flex flex-col gap-8 items-center justify-center md:flex-row md:gap-20">
         <Link href="https://www.betdex.com">

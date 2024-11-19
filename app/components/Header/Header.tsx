@@ -1,5 +1,5 @@
 "use client";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { BurgerMenu } from "./BurgerMenu";
 import { DesktopMenu } from "./DesktopMenu";
 import { MobileMenu } from "./MobileMenu";
@@ -7,14 +7,20 @@ import { MobileMenu } from "./MobileMenu";
 export const Header: FC = () => {
   const [isBurgerMenuOpened, toggleBurgerMenu] = useState<boolean>(false);
 
-  const openBurgerMenu = () => {
-    toggleBurgerMenu(true);
-    document.body.style.overflow = "hidden";
-  };
-  const closeBurgerMenu = () => {
-    toggleBurgerMenu(false);
-    document.body.style.overflow = "auto";
-  };
+  useEffect(() => {
+    if (isBurgerMenuOpened) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, [isBurgerMenuOpened]);
+
+  const openBurgerMenu = () => toggleBurgerMenu(true);
+  const closeBurgerMenu = () => toggleBurgerMenu(false);
 
   return (
     <header className="max-w-max-page mx-auto relative">

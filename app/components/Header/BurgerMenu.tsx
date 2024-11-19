@@ -11,7 +11,7 @@ type BurgerMenuProps = {
 export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
   const [openedDropdowns, toggleDropdown] = useState<string[]>([]);
 
-  const handleInnerItemClick = (id: string) => {
+  const handleDropdownSectionClick = (id: string) => {
     if (openedDropdowns.includes(id)) {
       toggleDropdown((prev) => prev.filter((item) => item !== id));
     } else {
@@ -48,7 +48,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
                   ) : (
                     <div
                       className="flex text-nav gap-3 justify-between"
-                      onClick={() => handleInnerItemClick(id)}
+                      onClick={() => handleDropdownSectionClick(id)}
                     >
                       <span>{label}</span>
                       {innerItems?.length && (
@@ -65,7 +65,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
                           key={`${id}-${i}`}
                           className="bg-transition hover:bg-dropdown-active-bg"
                         >
-                          <Link href={innerItem.href}>
+                          <Link href={innerItem.href} onClick={handleClose}>
                             <div className="flex gap-3.5 nav-dropdown py-3">
                               {innerItem.icon}
                               <span className="">{innerItem.title}</span>

@@ -10,7 +10,7 @@ export const TradingIntegrations: FC = () => (
       Trading Integrations
     </h2>
     <div className="flex flex-col gap-8 md:gap-12 lg:flex-row">
-      <div className="flex justify-center gap-5 h-[64px] w-auto md:h-[130px] lg:flex-col lg:h-auto lg:ml-[-90px] lg:justify-evenly lg:py-12">
+      <div className="flex justify-center gap-4 max-w-full h-[58px] md:h-[130px] lg:flex-col lg:h-auto lg:ml-[-90px] lg:justify-evenly lg:py-12">
         {integrationImages.map((src, i) => (
           <Image
             key={`illustration-${i}`}

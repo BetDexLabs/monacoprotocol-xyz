@@ -25,6 +25,9 @@
   .text-small {
     @apply text-[14px] leading-[20px] font-normal tracking-tight;
   }
+  .text-footer {
+    @apply text-[14px] leading-[1.25] font-medium tracking-tighter;
+  }
 
   @screen md {
     .page-heading {
@@ -47,6 +50,9 @@
     }
     .text-small {
       @apply text-[20px] leading-[24px];
+    }
+    .text-footer {
+      @apply text-[16px]
     }
   }
 
@@ -71,6 +77,9 @@
     }
     .text-small {
       @apply text-[24px] leading-[34px];
+    }
+    .text-footer {
+      @apply text-[22px]
     }
   }
 
@@ -107,6 +116,14 @@
   .blurred-wrapper {
     @apply bg-blurred-bg backdrop-blur-[50px] w-full;
   }
+  .blurred-section {
+    @apply blurred-wrapper my-3
+  }
+  @screen md {
+    .blurred-section {
+      @apply blurred-wrapper my-12
+    }
+  }
   @screen lg {
     .section {
       @apply max-w-max-content;
@@ -115,6 +132,9 @@
   @screen xxl {
     .section {
       @apply gap-12 max-w-max-content-xxl;
+    }
+    .blurred-section {
+      @apply blurred-wrapper my-9
     }
   }
 }

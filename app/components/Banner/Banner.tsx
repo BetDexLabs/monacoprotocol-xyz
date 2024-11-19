@@ -1,5 +1,5 @@
 "use client";
-import { LinkButton } from "@/app/common";
+import { emailLink, LinkButton } from "@/app/common";
 import { RightArrow } from "@/icons";
 import { FC } from "react";
 
@@ -16,7 +16,7 @@ export const Banner: FC<BannerProps> = ({ caption }) => (
         <RightArrow className="hidden md:block" />
       </div>
       <LinkButton
-        href="/"
+        href={emailLink}
         label="Contact team"
         mobileLabel="Contact Our team"
         variant="dark"

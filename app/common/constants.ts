@@ -1,1 +1,1 @@
-export const emailLink = "mailto:support@betdex.com";
+export const emailLink = "mailto:hello@monacoprotocol.xyz";
