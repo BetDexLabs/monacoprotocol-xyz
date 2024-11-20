@@ -47,7 +47,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
                     </Link>
                   ) : (
                     <div
-                      className="flex text-nav gap-3 justify-between"
+                      className={`flex text-nav gap-3 justify-between ${innerItems?.length && "hover:cursor-pointer"}`}
                       onClick={() => handleDropdownSectionClick(id)}
                     >
                       <span>{label}</span>

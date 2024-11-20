@@ -1,6 +1,5 @@
 import illustration1 from "@/public/tradingIntegrations/illustration1.png";
 import illustration2 from "@/public/tradingIntegrations/illustration2.png";
-import illustration3 from "@/public/tradingIntegrations/illustration3.png";
 import image1 from "@/public/tradingIntegrations/trading1.png";
 import image2 from "@/public/tradingIntegrations/trading2.png";
 import image3 from "@/public/tradingIntegrations/trading3.png";
@@ -41,4 +40,4 @@ export const integrationArticles: IntegrationProps[] = [
   },
 ];
 
-export const integrationImages = [illustration1, illustration2, illustration3];
+export const integrationImages = [illustration1, illustration2];

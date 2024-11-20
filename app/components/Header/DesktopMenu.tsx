@@ -43,7 +43,7 @@ export const DesktopMenu = () => {
                   </Link>
                 ) : (
                   <div
-                    className={`flex text-nav gap-3 text-transition hover:text-active ${isCurrentSectionOpened ? "text-active" : "text-primary"}`}
+                    className={`flex text-nav gap-3 text-transition hover:text-active ${isCurrentSectionOpened ? "text-active" : "text-primary"} ${innerItems?.length && "hover:cursor-pointer"}`}
                     onClick={() => handleDropdownSectionClick(id)}
                   >
                     <span>{label}</span>
