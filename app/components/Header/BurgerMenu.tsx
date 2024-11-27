@@ -40,7 +40,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
               return (
                 <li key={id} className="w-full">
                   {href ? (
-                    <Link href={href}>
+                    <Link href={href} target="_blank">
                       <div className="flex text-nav">
                         <span>{label}</span>
                       </div>
@@ -65,10 +65,16 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
                           key={`${id}-${i}`}
                           className="bg-transition hover:bg-dropdown-active-bg"
                         >
-                          <Link href={innerItem.href} onClick={handleClose}>
+                          <Link
+                            href={innerItem.href}
+                            onClick={handleClose}
+                            {...(innerItem.anchorLink
+                              ? {}
+                              : { target: "_blank" })}
+                          >
                             <div className="flex gap-3.5 nav-dropdown py-3">
                               {innerItem.icon}
-                              <span className="">{innerItem.title}</span>
+                              <span>{innerItem.title}</span>
                             </div>
                           </Link>
                         </li>

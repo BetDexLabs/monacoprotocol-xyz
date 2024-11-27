@@ -36,7 +36,7 @@ export const DesktopMenu = () => {
             return (
               <li key={`${label}-${i}`} className="relative">
                 {href ? (
-                  <Link href={href}>
+                  <Link href={href} target="_blank">
                     <div className="flex text-nav text-transition hover:text-active">
                       <span>{label}</span>
                     </div>
@@ -64,7 +64,12 @@ export const DesktopMenu = () => {
                         key={`${id}-${i}`}
                         className="bg-transition hover:bg-dropdown-active-bg"
                       >
-                        <Link href={innerItem.href}>
+                        <Link
+                          href={innerItem.href}
+                          {...(innerItem.anchorLink
+                            ? {}
+                            : { target: "_blank" })}
+                        >
                           <div className="flex gap-3.5 nav-dropdown px-4 py-5">
                             {innerItem.icon}
                             <span className="">{innerItem.title}</span>

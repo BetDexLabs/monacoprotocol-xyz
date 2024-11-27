@@ -14,7 +14,12 @@ interface NavItem {
   label: string;
   href?: string;
   arrowRight?: boolean;
-  innerItems?: { icon: ReactNode; title: string; href: string }[];
+  innerItems?: {
+    icon: ReactNode;
+    title: string;
+    href: string;
+    anchorLink?: boolean;
+  }[];
 }
 
 export const navItems: NavItem[] = [
@@ -26,11 +31,13 @@ export const navItems: NavItem[] = [
         icon: <ChartUp />,
         title: "Trading Integrations",
         href: "#trading-integrations",
+        anchorLink: true,
       },
       {
         icon: <SquareCode />,
         title: "Applications and Services",
         href: "#applications-and-services",
+        anchorLink: true,
       },
     ],
   },
@@ -69,7 +76,7 @@ export const navItems: NavItem[] = [
   {
     id: "roadmap",
     label: "Roadmap",
-    href: "https://app.gitbook.com/o/QXqMMSlR6dqssLlaKHzO/s/Vfpc0TGdiWkYLfDmsn6Y/readme/the-roadmap",
+    href: "https://docs.monacoprotocol.xyz/readme/the-roadmap ",
   },
 ];
 
