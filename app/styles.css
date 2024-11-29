@@ -14,7 +14,7 @@
     @apply text-[16px] leading-[1.25] font-semibold;
   }
   .text-nav {
-    @apply text-[16px] font-semibold;
+    @apply text-[18px] leading-[1.25] font-medium;
   }
   .text-caption {
     @apply text-[16px] leading-[1.25] font-semibold;
@@ -24,6 +24,9 @@
   }
   .text-small {
     @apply text-[14px] leading-[20px] font-normal tracking-tight;
+  }
+  .text-footer {
+    @apply text-[14px] leading-[1.25] font-medium tracking-tighter;
   }
 
   @screen md {
@@ -48,6 +51,15 @@
     .text-small {
       @apply text-[20px] leading-[24px];
     }
+    .text-footer {
+      @apply text-[16px]
+    }
+  }
+
+  @screen lg {
+    .text-nav {
+      @apply font-semibold
+    }
   }
 
   @screen xxl {
@@ -65,6 +77,9 @@
     }
     .text-small {
       @apply text-[24px] leading-[34px];
+    }
+    .text-footer {
+      @apply text-[22px]
     }
   }
 
@@ -101,6 +116,14 @@
   .blurred-wrapper {
     @apply bg-blurred-bg backdrop-blur-[50px] w-full;
   }
+  .blurred-section {
+    @apply blurred-wrapper my-3
+  }
+  @screen md {
+    .blurred-section {
+      @apply blurred-wrapper my-12
+    }
+  }
   @screen lg {
     .section {
       @apply max-w-max-content;
@@ -110,5 +133,34 @@
     .section {
       @apply gap-12 max-w-max-content-xxl;
     }
+    .blurred-section {
+      @apply blurred-wrapper my-9
+    }
   }
 }
+
+/* transition */
+.common-transition {
+  @apply transition-all duration-500 ease-in-out
+}
+
+.text-transition {
+  @apply transition-colors duration-500 ease-in-out
+}
+
+.bg-transition {
+  @apply transition-colors duration-500 ease-in-out
+
+}
+
+/* reusable cases */
+.nav-dropdown {
+ @apply text-[#D3D3D3] text-[16px] leading-[20px] hover:text-primary text-transition
+}
+@screen xxl {
+  .nav-dropdown {
+    @apply text-[18px] leading-[22px]
+  }
+}
+
+

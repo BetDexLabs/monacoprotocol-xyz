@@ -4,6 +4,7 @@ import {
   Ecosystem,
   Hero,
   OtherProducts,
+  Partners,
   TradingIntegrations,
   TrustedBy,
 } from "@/app/components";
@@ -19,6 +20,7 @@ export default function Home() {
       <OtherProducts />
       <Banner caption="Learn more about building an application" />
       <Ecosystem />
+      <Partners />
     </main>
   );
 }
