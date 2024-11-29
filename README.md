@@ -20,7 +20,7 @@ yarn build
 
 ## Deploying
 
-To deploy the project:
+To deploy the project (assuming you have the necessary permissions):
 
 ```bash
 yarn deploy-dev (to deploy to the dev environment at: dev.monacoprotocol.xyz)
