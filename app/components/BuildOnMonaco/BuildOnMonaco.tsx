@@ -12,7 +12,7 @@ export const BuildOnMonaco: FC = () => (
           Applications and Services
         </h2>
         <h3 className="text-subheading text-center">
-          Sportsbooks and Sportsbetting exchanges
+          Sportsbooks and Sports Betting Exchanges
         </h3>
       </div>
 
