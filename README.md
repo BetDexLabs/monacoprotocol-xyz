@@ -25,7 +25,7 @@ To deploy the project (assuming you have the necessary permissions):
 ```bash
 yarn deploy-dev (to deploy to the dev environment at: dev.monacoprotocol.xyz)
 # or
-yarn deploy-prod (to deploy to the prod environment at: prod.monacoprotocol.xyz)
+yarn deploy-prod (to deploy to the prod environment at: www.monacoprotocol.xyz)
 ```
 
 Be aware that deploying will overwrite any existing files in the target environment.
