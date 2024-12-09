@@ -71,7 +71,7 @@ export const navItems: NavItem[] = [
   {
     id: "points",
     label: "Points",
-    href: "https://www.monacoprotocol.xyz/points",
+    href: "https://points.monacoprotocol.xyz/points",
   },
   {
     id: "roadmap",
