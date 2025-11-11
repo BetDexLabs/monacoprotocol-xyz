@@ -25,7 +25,7 @@ export const benefits: IntegrationProps[] = [
       width: 100,
       height: 100,
     },
-    title: "Permissionless Liquidity Pool",
+    title: "Global Liquidity Pool",
     description:
       "Users of Monaco products are able to tap into a global liquidity pool while maintaining custody of their funds.",
   },
@@ -37,6 +37,6 @@ export const benefits: IntegrationProps[] = [
     },
     title: "Proven Monetization Strategies",
     description:
-      "Leverage the protocol to create revenue streams. As a dApp developer you can set your own commission rate, allowing you to monetize from the trading that you facilitate.",
+      "Leverage the protocol to create revenue streams. As an app developer you can set your own commission rate, allowing you to monetize from the trading that you facilitate.",
   },
 ];

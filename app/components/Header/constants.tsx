@@ -1,12 +1,5 @@
 import { emailLink } from "@/app/common";
-import {
-  BookSharp,
-  ChartUp,
-  Discord,
-  Github,
-  SquareCode,
-  Twitter,
-} from "@/icons";
+import { BookSharp, ChartUp, Discord, SquareCode } from "@/icons";
 import { ReactNode } from "react";
 
 interface NavItem {
@@ -14,6 +7,7 @@ interface NavItem {
   label: string;
   href?: string;
   arrowRight?: boolean;
+  newTab?: boolean;
   innerItems?: {
     icon: ReactNode;
     title: string;
@@ -30,13 +24,13 @@ export const navItems: NavItem[] = [
       {
         icon: <ChartUp />,
         title: "Trading Integrations",
-        href: "#trading-integrations",
+        href: "/#trading-integrations",
         anchorLink: true,
       },
       {
         icon: <SquareCode />,
         title: "Applications and Services",
-        href: "#applications-and-services",
+        href: "/#applications-and-services",
         anchorLink: true,
       },
     ],
@@ -47,36 +41,23 @@ export const navItems: NavItem[] = [
     innerItems: [
       {
         icon: <BookSharp />,
-        title: "Protocol Docs",
-        href: "https://docs.monacoprotocol.xyz",
+        title: "Rest API Documentation",
+        href: "https://docs.api.monacoprotocol.xyz",
+        anchorLink: true,
       },
       {
-        icon: <Github />,
-        title: "GitHub",
-        href: "https://github.com/MonacoProtocol",
+        icon: <BookSharp />,
+        title: "Stream API Documentation",
+        href: "https://docs.api.monacoprotocol.xyz/stream/docs/websockets/",
+        anchorLink: true,
       },
       {
         icon: <Discord />,
         title: "Discord",
         href: "https://discord.gg/8mR7bbBMP6",
-      },
-      {
-        icon: <Twitter />,
-        title: "Twitter",
-        href: "https://twitter.com/MonacoProtocol",
+        anchorLink: true,
       },
     ],
-  },
-  { id: "blog", label: "Blog", href: "https://medium.com/@monacoprotocol" },
-  {
-    id: "points",
-    label: "Points",
-    href: "https://points.monacoprotocol.xyz/points",
-  },
-  {
-    id: "roadmap",
-    label: "Roadmap",
-    href: "https://docs.monacoprotocol.xyz/readme/the-roadmap ",
   },
 ];
 

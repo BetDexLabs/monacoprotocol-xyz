@@ -34,13 +34,16 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
         </div>
         <div className="flex w-full horizontal-padding">
           <ul className="flex flex-col w-full pb-6 gap-6 pr-1">
-            {navItems.map(({ id, label, href, innerItems }) => {
+            {navItems.map(({ id, label, href, newTab, innerItems }) => {
               const isCurrentSectionOpened = openedDropdowns.includes(id);
 
               return (
                 <li key={id} className="w-full">
                   {href ? (
-                    <Link href={href} target="_blank">
+                    <Link
+                      href={href}
+                      {...(newTab ? { target: "_blank" } : { target: "_self" })}
+                    >
                       <div className="flex text-nav">
                         <span>{label}</span>
                       </div>
@@ -74,7 +77,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
                           >
                             <div className="flex gap-3.5 nav-dropdown py-3">
                               {innerItem.icon}
-                              <span>{innerItem.title}</span>
+                              <span>{innerItem.title}432432324</span>
                             </div>
                           </Link>
                         </li>

@@ -6,7 +6,7 @@ import "./styles.css";
 export const metadata: Metadata = {
   title: "The Monaco Protocol",
   description:
-    "The Monaco Protocol provides a decentralized liquidity network for exchange-based applications built on the Solana blockchain.",
+    "A world class, globally available liquidity pool for betting and prediction markets.",
 };
 
 export default function RootLayout({
