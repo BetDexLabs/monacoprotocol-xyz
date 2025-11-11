@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "deploy-dev": "next build && aws s3 sync ./out/ s3://dev.monacoprotocol.xyz",
     "deploy-prod": "next build && aws s3 sync ./out/ s3://www.monacoprotocol.xyz"
   },

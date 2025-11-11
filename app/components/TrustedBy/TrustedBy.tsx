@@ -18,11 +18,11 @@ export const TrustedBy: FC = () => (
             />
           </div>
         </Link>
-        <Link href="https://www.purebet.io">
+        <Link href="https://www.mollybet.com">
           <div className="max-w-[150px] h-auto md:max-w-[161px] xxl:max-w-[201px]">
             <Image
-              src="/purebet-logo.png"
-              alt="purebet logo"
+              src="/mollybet-logo.svg"
+              alt="mollybet logo"
               width={201}
               height={135}
             />
