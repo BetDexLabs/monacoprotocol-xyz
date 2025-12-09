@@ -77,7 +77,7 @@ export const BurgerMenu: FC<BurgerMenuProps> = ({ isVisible, handleClose }) => {
                           >
                             <div className="flex gap-3.5 nav-dropdown py-3">
                               {innerItem.icon}
-                              <span>{innerItem.title}432432324</span>
+                              <span>{innerItem.title}</span>
                             </div>
                           </Link>
                         </li>
