@@ -1,7 +1,11 @@
-/** @type {import('next').NextConfig} */
+import withMDX from '@next/mdx';
+
 const nextConfig = {
-  output: "export",
-  images: { unoptimized: true },
+	output: "export",
+	images: { unoptimized: true },
 };
 
-export default nextConfig;
+export default withMDX({
+	extension: /\.mdx?$/,
+	options: {},
+})(nextConfig);

@@ -1,8 +1,20 @@
+  .bg-betdex-purple {
+    background-color: var(--betdex-purple);
+  }
+  .text-betdex-purple {
+    color: var(--betdex-purple);
+  }
+  .border-betdex-purple {
+    border-color: var(--betdex-purple);
+  }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
+  .text-betdex-purple {
+    color: var(--betdex-purple);
+  }
   /* texts */
   .page-heading {
     @apply text-[32px] leading-[1.25] font-semibold tracking-tighter;

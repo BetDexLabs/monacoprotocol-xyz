@@ -5,7 +5,8 @@ import "./globals.css";
 import "./styles.css";
 
 export const metadata: Metadata = {
-  title: "The Monaco Protocol",
+  title:
+    "BetDEX API - A global liquidity pool for betting and prediction markets",
   description:
     "A world class, globally available liquidity pool for betting and prediction markets.",
 };
