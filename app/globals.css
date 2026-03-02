@@ -13,40 +13,28 @@
   --gray-300: #c4c4c4;
   --gray-200: #f4f4f4;
   --black-900: #0D0B14;
-  --gradient-dark-purple: linear-gradient(270deg, #1c0068 0%, #090514 100%);
-  --gradient-blue-to-purple: linear-gradient(
-    90deg,
-    #109ef6 0%,
-    #2573f7 42%,
-    #4337f9 100%
-  );
-  --gradient-light-blue-to-purple: linear-gradient(
-    90deg,
-    #109ef6 0%,
-    #4337f9 100%
-  );
-  --gradient-dark-purple-to-black: linear-gradient(270deg, #371F7A 0%, #090514 100%);
+  --gradient-dark-purple: linear-gradient(270deg, #7c3aed 0%, #371F7A 100%);
+  --gradient-blue-to-purple: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%);
+  --gradient-light-blue-to-purple: linear-gradient(90deg, #a78bfa 0%, #7c3aed 100%);
+  --gradient-dark-purple-to-black: linear-gradient(270deg, #7c3aed 0%, #090514 100%);
   --gradient-white-to-gray: linear-gradient(135deg, #ffffff 0%, #71717a 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   --dark-indigo-transparent: rgba(11, 4, 30, 0.3);
   --coal-transparent: rgba(13, 13, 13, 0.5);
   --general-background: #16004a;
+  --betdex-purple: #7c3aed;
 }
 
-html {
-  background: var(--black);
-}
-
-body {
-  color: var(--white);
-  background: var(--gradient-dark-purple);
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
+   html, body {
+     background: #000 !important;
+     color: var(--white);
+     min-height: 100vh;
+     font-family: 'Inter', sans-serif;
+   }
 
 @screen md {
   body {
-    background-image: url("/monaco-bg.png"), var(--gradient-dark-purple);
+    background-image: var(--gradient-dark-purple);
     background-position: top center;
     background-size: 100%;
   }

@@ -1,12 +1,12 @@
 import monacoMobile from "@/public/monaco-icon-mobile.png";
-import monacoDesktop from "@/public/monaco-icon.png";
+import monacoDesktop from "@/public/betdex-logo.png";
 
 import Image from "next/image";
 import { FC } from "react";
 
 export const MonacoLogo: FC = () => (
   <>
-    <div className="hidden h-auto w-[54px] xxl:w-[88px] lg:block">
+    <div className="hidden h-auto w-[154px] xxl:w-[88px] lg:block">
       <Image
         className="w-full"
         src={monacoDesktop}

@@ -5,17 +5,8 @@ import { FC } from "react";
 import { benefits } from "./constants";
 
 export const BuildOnMonaco: FC = () => (
-  <section className="lg:relative" id="applications-and-services">
+  <section className="lg:relative bg-black" id="applications-and-services">
     <div className="section xxl:gap-24">
-      <div className="flex flex-col gap-8 xxl:gap-12">
-        <h2 className="heading-dark text-heading text-center">
-          Applications and Services
-        </h2>
-        <h3 className="text-subheading text-center">
-          Sportsbooks and Sports Betting Exchanges
-        </h3>
-      </div>
-
       <div className="flex flex-col gap-8 lg:gap-12 lg:flex-row">
         <div className="lg:absolute right-0 lg:h-[729px] lg:w-[638px] lg:z-10 xxl:w-[952px] xxl:h-[1222px]">
           <div className="relative w-full h-[390px] md:h-[729px] right-[-16px] md:right-[-36px] lg:right-0 lg:h-[729px] lg:w-[638px] xxl:w-[952px] xxl:h-[1222px]">
